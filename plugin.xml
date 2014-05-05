@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="PentahoStats" loader="DEFAULT">
+<overlays>
+		<overlay id="startup.PentahoStats" resourcebundle="content/PentahoStats/resources/lang/messages">
+			<menubar id="toolsmenu">
+	        	<menuitem id="PentahoStats" label="${Launcher.PentahoStats}" command="mantleXulHandler.openUrl('${Launcher.PentahoStats}','${Launcher.PentahoStats_TOOLTIP}','plugin/PentahoStats/api/default')"/>
+	      	</menubar>
+	    </overlay>
+	</overlays>
+	<lifecycle-listener class="pt.webdetails.cpk.CpkLifecycleListener"/>
+	<static-paths>
+		<static-path url="/PentahoStats/static" localFolder="static"/>
+		<static-path url="/PentahoStats/resources" localFolder="resources"/>
+	</static-paths>
+	<content-types>
+		<content-type>
+			<title>PentahoStats</title>
+			<description></description>
+			<company name="" url="" logo="@PLUGIN_COMPANY_LOGO@"></company>
+		</content-type>
+	</content-types>
+	<content-generator
+		id="PentahoStats"
+		title="PentahoStats"
+		type="PentahoStats"
+		class="pt.webdetails.cpk.CpkContentGenerator"/>
+	<!-- Menu entry -->
+	<menu-items>
+		<!--<menu-item id="PentahoStats_main" anchor="tools-submenu" label="PentahoStats" command="content/PentahoStats/" type="MENU_ITEM" how="LAST_CHILD"/>-->
+	</menu-items>
+</plugin>
